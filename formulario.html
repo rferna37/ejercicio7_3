@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+   <head>
+      <title>Consulta de notes</title>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <link rel="stylesheet" type="text/css" href="estilo/estilo.css" />
+   </head>
+   <body>
+        <header>
+           <img src="imagenes/logo_fleming.jpg" id="logo"/>    
+           <div id="daw">Desenvolvimientu d'aplicaciones web</div>
+        </header>
+        <h1>Consulta de notes</h1>
+        <form action="" method="post">
+             <div class="izquierda">
+                 <label for="nif">NIF:</label>
+                 <label for="modulo">Módulu</label>
+             </div>
+             <div class="derecha">
+                 <input type="text" class="valor" name="nif" id="dni" value="{nif}" />
+                 <select class="valor" name="modulo" id="modulo">{listaModulos}</select>
+             </div>
+             <div class="linea">
+                <input class="boton" type="submit" value="Consultar" />
+             </div>
+          </form>
+        <div class="linea">
+             <div class="error">
+                {error}
+             </div>
+             <div class="resultado">
+                {resultado}
+             </div>
+        </div>
+        <div id="pie">
+          Institutu d'educación secundaria "Doctor Fleming". Departamentu d'informática.
+        </div> 
+      </div>
+   </body>
+</html>

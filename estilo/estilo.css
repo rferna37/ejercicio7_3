@@ -1,0 +1,96 @@
+@CHARSET "UTF-8";
+body {
+	font-family: arial, sans-serif;
+	font-size: 12px;
+	color: #000;
+	width: 900px;
+	margin: 0 auto;
+}
+header {
+	background-color: #F7FCF8;
+	height:  70px;
+	padding: 0 10px;
+	border: 1px solid #B84136;
+	margin: 10px 0;
+}
+h1 {
+	font-size: 1.5em;
+	text-align: center;
+}
+label {
+	float: right;
+	clear:both;
+	margin: 5px;
+}
+table {
+	margin: 5px auto;
+}
+th {
+	color: white;
+	background-color: #B84136;
+}
+td {
+	border-bottom: 1px solid #B84136;
+}
+#logo {
+	height: 70px;
+	display: block;
+	float: left;
+}
+#daw{
+	display: block;
+	float: right;
+	font-size: 18px;
+	font-style: italic;
+	font-weight: bold;
+	color: #B84136;
+	margin:30px;
+	margin-right: 200px;
+}
+#pie {
+	width: 100%;
+	float: left;
+	background-color: #B84136;
+	color: yellow;
+	text-align: center;
+	padding: 5px 0;
+}
+.linea {
+	width: 23%;
+	margin: 0 auto;
+}
+.etiqueta{
+	margin: 0;
+	margin-bottom: 5px;
+}
+.valor {
+	float: left;
+	clear: both;
+	margin-left: 5px;
+	margin-bottom: 5px;
+}
+.boton{
+	display: block;
+	margin: 10px auto; 
+	clear: both;
+}
+.resultado{
+	text-align: center;
+	color: blue;
+}
+.error{
+	text-align: center;
+	color: red;
+}
+.izquierda {
+	width: 40%;
+	float: left;
+}
+.derecha {
+	width: 60%;
+	float: right;
+}
+html{
+	 height: 100%;
+	 background-color: white;
+	 }
