@@ -1,0 +1,40 @@
+{% extends "principal.html.twig" %}
+
+{% block titulo %}Consulta de notes{% endblock %}
+
+{% block contenido %}
+    <h1>Consulta de notes</h1>
+    <form action="" method="post">
+        <div class="izquierda">
+            <label for="nif">NIF:</label>
+            <label for="modulo">Módulu</label>
+        </div>
+        <div class="derecha">
+            <input type="text" class="valor" name="nif" id="nif" value="{{ nif }}" />
+            <select class="valor" name="modulo" id="modulo">
+                {% for codigo, nombre in modulos %} 
+                   <option value="{{codigo}}" {{ (codigo == moduloSel) ? 'selected' : ' ' }} >
+                         {{nombre}}
+                    </option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="linea">
+            <input class="boton" type="submit" value="Consultar" />
+        </div>
+    </form>
+    <div class="linea">
+        <div class="error">
+            {{ error }}
+        </div>
+        <div class="resultado">
+            {% if notas %}
+                <table><tr><th>Fecha</th><th>Nota</th></tr>
+                {% for nota in notas %}
+                    <tr><td>{{ nota.fecha }}</td><td>{{ nota.nota}}</td></tr>
+                {% endfor %}
+                </table>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html>
+   <head>
+      {% block head %}
+          <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+          <link rel="stylesheet" type="text/css" href="estilo/estilo.css" />
+          <title>{% block titulo %}{% endblock %}</title>
+      {% endblock %}
+   </head>
+   <body>
+        <header>
+           <img src="imagenes/logo_fleming.jpg" id="logo"/>    
+           <div id="daw">Desenvolvimientu d'aplicaciones web</div>
+        </header>
+        <article>{% block contenido %}{% endblock %}</article>
+        <footer>
+          Institutu d'educación secundaria "Doctor Fleming". Departamentu d'informática.
+        </footer>
+   </body>
+</html>

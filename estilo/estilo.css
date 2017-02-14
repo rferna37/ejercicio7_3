@@ -13,6 +13,14 @@ header {
 	border: 1px solid #B84136;
 	margin: 10px 0;
 }
+footer {
+	width: 100%;
+	float: left;
+	background-color: #B84136;
+	color: yellow;
+	text-align: center;
+	padding: 5px 0;
+}
 h1 {
 	font-size: 1.5em;
 	text-align: center;
@@ -31,6 +39,8 @@ th {
 }
 td {
 	border-bottom: 1px solid #B84136;
+	padding: 0 10px;
+	text-align: center;
 }
 #logo {
 	height: 70px;
@@ -46,14 +56,6 @@ td {
 	color: #B84136;
 	margin:30px;
 	margin-right: 200px;
-}
-#pie {
-	width: 100%;
-	float: left;
-	background-color: #B84136;
-	color: yellow;
-	text-align: center;
-	padding: 5px 0;
 }
 .linea {
 	width: 23%;
