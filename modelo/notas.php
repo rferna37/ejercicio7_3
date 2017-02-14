@@ -2,7 +2,6 @@
  /**************************************************************************
   *  Esta clase pertenece al MODELO del ejercicio7_3. Curso 2016/17.      *
   *************************************************************************/
-    require_once "conexion.php";
    
 	class Notas{
       
@@ -19,6 +18,10 @@
             $notas = $resultado->fetchAll(PDO::FETCH_NUM); 
             $resultado->closeCursor();
             $gbd = null;
+            foreach ($notas as $key => $fila) {
+              $fecha = new DateTime($fila[0]);
+              $notas[$key][0] = $fecha->format('d/m/Y');
+            }
             
             if($notas == null){
               return "El alumnu nun tien ninguna nota nesi módulo";

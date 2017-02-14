@@ -2,17 +2,17 @@
  /**************************************************************************
   *  Ejercicio7_3, curso 2016/17.                                          *
   * ************************************************************************/
-  
-   include('vista/formulario.php');
-   include('vista/tabla.php');
-   require_once('modelo/notas.php');
-   require_once('modelo/modulos.php');
-
+   include 'autocargador.php';	
+   
    abstract class Index{
         private static $diccionario = array('nif' => "", 'error' => "", 'resultado' => "", 
                                             'listaModulos' => "");
 
         static function run(){
+        	  $cargador = new Autocargador(); // Se instancia el autocargador.
+        	  $cargador->registrar();         // Se registra su método cargador en el procesador PHP.
+        	  $cargador->addDirectorio('vista'); // Se dan los directorios en los que buscar clases.
+        	  $cargador->addDirectorio('modelo');
               $codModulo = "";
               $notas = new Notas();
               if (isset($_POST['nif'])){ 
@@ -28,7 +28,6 @@
                   } else {
                       $tabla = new Tabla(array("Fecha", "Nota"), $nota);
                       self::$diccionario['resultado'] = $tabla->obtenerTabla();
-                      //print_r($tabla->obtenerTabla()); die();
                   }  
               }
 
